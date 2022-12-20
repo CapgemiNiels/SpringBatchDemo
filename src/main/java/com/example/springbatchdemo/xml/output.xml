@@ -1,0 +1,6 @@
+<bean id="itemWriter"
+      class="org.springframework.batch.item.xml.StaxEventItemWriter">
+    <property name="resource" value="file:xml/output.xml" />
+    <property name="marshaller" ref="recordMarshaller" />
+    <property name="rootTagName" value="transactionRecord" />
+</bean>
